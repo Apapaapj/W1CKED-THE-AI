@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "functions": {
+    "api/chat.js": {
+      "includeFiles": "api/**",
+      "maxDuration": 60
+    },
+    "api/Pow_challenge.js": { "maxDuration": 10 },
+    "api/createKey.js": { "maxDuration": 15 },
+    "api/payment.js": { "maxDuration": 15 },
+    "api/telegram.js": { "maxDuration": 10 },
+    "api/deepseek.js": { "maxDuration": 5 }
+  },
+  "rewrites": [
+    { "source": "/chat", "destination": "/index.html" },
+    { "source": "/((?!api/).*)", "destination": "/$1" }
+  ]
+}
